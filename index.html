@@ -1,0 +1,1308 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ASTEROID MAXIMUS | $ASTEROID — ASTEROID MAXIMUS</title>
+    <meta
+      name="description"
+      content="ASTEROID MAXIMUS has risen. ASTEROID MAXIMUS of Ethereum. 1B Supply. Renounced. LP Burnt. Join the Legion."
+    />
+    <link rel="icon" type="image/png" href="images/favicon.png" />
+    <link rel="apple-touch-icon" href="images/logo.png" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&amp;family=UnifrakturCook:wght@700&amp;family=IM+Fell+English+SC&amp;display=swap");
+
+      :root {
+        --gold: #d4af77;
+        --blood: #8c1f11;
+        --marble: #e8e0d1;
+      }
+
+      body {
+        font-family: "IM Fell English SC", "Playfair Display", serif;
+      }
+
+      .sans {
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+          Roboto, sans-serif;
+      }
+
+      .ancient-title {
+        font-family: "UnifrakturCook", "Playfair Display", serif;
+        letter-spacing: 2px;
+      }
+
+      .marble-bg {
+        background: linear-gradient(#1c140f, #110c08);
+      }
+
+      .gold-gradient {
+        background: linear-gradient(90deg, #d4af77, #f4e4c1, #d4af77);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      .section-divider {
+        height: 1px;
+        background: linear-gradient(
+          to right,
+          transparent,
+          #d4af77,
+          transparent
+        );
+      }
+
+      .imperial-card {
+        background: #1c140f;
+        border: 1px solid #5c4630;
+        transition: all 0.3s ease;
+      }
+
+      .imperial-card:hover {
+        border-color: #d4af77;
+        transform: translateY(-4px);
+        box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1),
+          0 8px 10px -6px rgb(0 0 0 / 0.1);
+      }
+
+      .nav-link {
+        position: relative;
+        transition: color 0.2s ease;
+      }
+
+      .nav-link:after {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 1px;
+        bottom: -2px;
+        left: 0;
+        background-color: #d4af77;
+        transition: width 0.3s ease;
+      }
+
+      .nav-link:hover:after {
+        width: 100%;
+      }
+
+      .roman-ornament {
+        font-size: 1.1rem;
+        letter-spacing: 6px;
+        color: #d4af77;
+      }
+
+      .lore-text {
+        font-size: 1.05rem;
+        line-height: 1.85;
+        color: #c9b89a;
+      }
+
+      .gallery-img {
+        transition: transform 0.4s cubic-bezier(0.23, 1, 0.32, 1),
+          box-shadow 0.4s ease;
+        cursor: pointer;
+      }
+
+      .gallery-img:hover {
+        transform: scale(1.015);
+        box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.5);
+      }
+
+      .stat-number {
+        font-family: "Playfair Display", serif;
+        font-size: 2.75rem;
+        line-height: 1;
+      }
+
+      .meme-badge {
+        background: #3a2a1f;
+        border: 1px solid #8c5e2e;
+        color: #e8d9b8;
+        font-size: 0.75rem;
+        letter-spacing: 1px;
+      }
+
+      .emperor-shadow {
+        box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.6),
+          0 10px 10px -6px rgb(0 0 0 / 0.5),
+          inset 0 1px 0 rgba(255, 255, 255, 0.1);
+      }
+
+      .scroll-indicator {
+        animation: bounce 2s infinite;
+      }
+
+      @keyframes bounce {
+        0%,
+        20% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(8px);
+        }
+        80%,
+        100% {
+          transform: translateY(0);
+        }
+      }
+
+      .parchment {
+        background: #f4e9d8;
+        color: #3f2a1f;
+      }
+
+      .roman-btn {
+        background: linear-gradient(#3a2a1f, #2a1f17);
+        border: 2px solid #d4af77;
+        color: #f4e4c1;
+        transition: all 0.2s ease;
+        font-family: system-ui, -apple-system, sans-serif;
+        letter-spacing: 1.5px;
+        font-size: 0.875rem;
+      }
+
+      .roman-btn:hover {
+        background: #d4af77;
+        color: #1c140f;
+        border-color: #f4e4c1;
+        transform: translateY(-1px);
+      }
+
+      .marble-text {
+        color: #d4af77;
+        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+      }
+
+      .gallery-modal {
+        animation: fadeInModal 0.2s ease forwards;
+      }
+
+      .shibius-gold {
+        color: #d4af77;
+      }
+
+      .ticker {
+        overflow: hidden;
+        white-space: nowrap;
+      }
+
+      .ticker-content {
+        display: inline-block;
+        animation: ticker 35s linear infinite;
+      }
+
+      @keyframes ticker {
+        0% {
+          transform: translateX(0);
+        }
+        100% {
+          transform: translateX(-50%);
+        }
+      }
+
+      .epic-heading {
+        font-size: clamp(2.8rem, 8vw, 5.8rem);
+        line-height: 0.92;
+        font-weight: 700;
+      }
+    </style>
+  </head>
+  <body class="bg-[#0f0a05] text-[#e8d9b8] overflow-x-hidden">
+    <!-- NAVBAR -->
+    <nav
+      class="fixed top-0 left-0 right-0 z-50 bg-[#0f0a05]/95 backdrop-blur-md border-b border-[#3a2a1f]"
+    >
+      <div
+        class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between"
+      >
+        <div class="flex items-center gap-x-3">
+          <div
+            class="w-12 h-12 rounded-full overflow-hidden border-[3px] border-[#d4af77] shadow-inner ring-1 ring-[#3a2a1f]"
+          >
+            <img
+              src="images/logo.png"
+              alt="ASTEROID MAXIMUS"
+              class="w-full h-full object-cover"
+            />
+          </div>
+          <div>
+            <div
+              class="font-bold text-2xl tracking-[3px] ancient-title text-[#d4af77]"
+            >
+              ASTEROID
+            </div>
+            <div class="text-[10px] text-[#8c5e2e] -mt-1.5 tracking-[4px]">
+              MAXIMUS
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="hidden md:flex items-center gap-x-9 text-sm tracking-widest"
+        >
+          <a href="#legend" class="nav-link hover:text-[#d4af77]">THE LEGEND</a>
+          <a href="#alliance" class="nav-link hover:text-[#d4af77]"
+            >ABOUT</a
+          >
+          <a href="#tokenomics" class="nav-link hover:text-[#d4af77]"
+            >TOKENOMICS</a
+          >
+          <a href="#gallery" class="nav-link hover:text-[#d4af77]">GALLERY</a>
+          <a href="#buy" class="nav-link hover:text-[#d4af77]">HOW TO BUY</a>
+        </div>
+
+        <div class="flex items-center gap-x-3">
+          <a
+            href="https://t.me/Shibius_eth"
+            target="_blank"
+            class="hidden sm:flex items-center gap-x-2 px-5 py-2 text-xs tracking-[2px] rounded-full border border-[#5c4630] hover:border-[#d4af77] hover:text-[#d4af77] transition-colors"
+          >
+            <i class="fab fa-telegram-plane"></i>
+            <span>TELEGRAM</span>
+          </a>
+          <a
+            href="https://x.com/Shibius_eth"
+            target="_blank"
+            class="px-6 py-2.5 text-xs font-medium tracking-[2px] rounded-full roman-btn"
+          >
+            <i class="fab fa-twitter mr-2"></i>HOW TO BUY
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- HERO -->
+    <header
+      class="relative min-h-[100dvh] flex items-center justify-center pt-20 overflow-hidden"
+    >
+      <div class="absolute inset-0 bg-black/60 z-10"></div>
+      <img
+        src="images/hero-banner.jpg"
+        alt="ASTEROID MAXIMUS Emperor"
+        class="absolute inset-0 w-full h-full object-cover object-center scale-[1.08]"
+      />
+
+      <div class="relative z-20 max-w-5xl px-6 text-center">
+        <div class="mb-6 flex justify-center">
+          <div
+            class="inline-flex items-center gap-x-2 px-4 py-1 rounded-full border border-[#d4af77]/40 bg-black/30 text-xs tracking-[3px]"
+          >
+            <div
+              class="w-1.5 h-1.5 bg-[#d4af77] rounded-full animate-pulse"
+            ></div>
+            <span>ETHEREUM • 1,000,000,000 SUPPLY</span>
+          </div>
+        </div>
+
+        <h1
+          class="epic-heading ancient-title text-white tracking-[-2.5px] mb-2"
+        >
+          ASTEROID<br />MAXIMUS
+        </h1>
+        <p class="text-2xl md:text-3xl tracking-[6px] text-[#d4af77] mb-3">
+          ASTEROID MAXIMUS
+        </p>
+
+        <div class="max-w-lg mx-auto mb-10">
+          <p class="text-xl text-[#c9b89a]">
+            Forged among ancient asteroids, crowned beneath infinite stars.<br />Asteroid Maximus stands as the guardian of cosmic discovery and the eternal spirit of exploration.
+          </p>
+        </div>
+
+        <div
+          class="flex flex-col sm:flex-row items-center justify-center gap-4"
+        >
+          <a
+            href="https://app.uniswap.org/#/swap?inputCurrency=eth&outputCurrency=0xComingSoon"
+            target="_blank"
+            class="group px-10 py-4 rounded-full flex items-center justify-center gap-x-3 bg-[#d4af77] hover:bg-[#f4e4c1] text-[#1c140f] text-sm font-semibold tracking-[2px] transition-all active:scale-[0.985]"
+          >
+            <span>BUY $ASTEROID ON UNISWAP</span>
+            <i
+              class="fas fa-arrow-right group-active:translate-x-0.5 transition"
+            ></i>
+          </a>
+
+          <a
+            href="#tokenomics"
+            class="px-8 py-4 rounded-full flex items-center justify-center gap-x-3 border border-[#d4af77] text-sm tracking-[2px] hover:bg-white/5 transition-colors"
+          >
+            VIEW THE IMPERIAL DECREE
+          </a>
+        </div>
+      </div>
+
+      <div
+        class="absolute bottom-10 left-1/2 z-20 flex flex-col items-center text-xs tracking-[3px] text-[#d4af77]/70"
+      >
+        <div>SCROLL TO ENTER THE EMPIRE</div>
+        <i class="fas fa-chevron-down mt-1.5 scroll-indicator"></i>
+      </div>
+
+      <!-- Ticker -->
+      <div
+        class="absolute bottom-0 left-0 right-0 z-30 bg-black/70 border-t border-[#3a2a1f] py-2.5 overflow-hidden"
+      >
+        <div class="ticker text-[#8c5e2e] text-xs tracking-[4px]">
+          <div class="ticker-content flex items-center gap-x-8">
+            <span
+              >✧ SPQR ✧ ASTEROID MAXIMUS ✧ 0% TAX ✧ LP BURNT ✧ OWNERSHIP
+              RENOUNCED ✧ 1 BILLION SUPPLY ✧ ASTEROID MAXIMUS ✧ LIZ PERROTTO
+              ✧</span
+            >
+            <span
+              >✧ SPQR ✧ ASTEROID MAXIMUS ✧ 0% TAX ✧ LP BURNT ✧ OWNERSHIP
+              RENOUNCED ✧ 1 BILLION SUPPLY ✧ ASTEROID MAXIMUS ✧ LIZ PERROTTO
+              ✧</span
+            >
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- LEGEND / ABOUT -->
+    <section id="legend" class="max-w-5xl mx-auto px-6 pt-24 pb-20">
+      <div class="flex justify-center mb-4">
+        <div class="roman-ornament flex items-center gap-x-4">
+          <span>⚜</span>
+          <span class="text-sm tracking-[5px]">THE ANCIENT SCROLLS</span>
+          <span>⚜</span>
+        </div>
+      </div>
+
+      <h2
+        class="text-center text-6xl md:text-7xl ancient-title tracking-tighter mb-4 text-white"
+      >
+        The Legend of Asteroid Maximus
+      </h2>
+      <p class="text-center text-[#d4af77] text-xl tracking-widest mb-14">
+        BORN IN THE BLOCKCHAIN. FORGED IN MEME FIRE.
+      </p>
+
+      <div class="grid md:grid-cols-5 gap-6">
+        <!-- Main Lore -->
+        <div class="md:col-span-3 imperial-card p-9 rounded-3xl">
+          <div class="prose prose-invert max-w-none">
+            <p class="lore-text mb-6">
+              Asteroid Maximus is the ceremonial mascot and symbolic guardian inspired by the asteroid vision created by Liz Perrotto. 
+              Designed to embody exploration, resilience, and the pioneering spirit of space discovery, Asteroid Maximus serves as a bridge between scientific curiosity and imaginative storytelling.
+            </p>
+
+            <p class="lore-text mb-6">
+              Dressed in regal crimson-and-gold attire adorned with celestial motifs, Asteroid Maximus represents the enduring journey of asteroids through the cosmos—ancient travelers that carry the history of our solar system.His name reflects both the grandeur of space and the ambitious pursuit of understanding the universe.
+            </p>
+
+            <p class="lore-text">
+              The character's visual design combines classical symbols of leadership, such as laurel wreaths and ceremonial armor, with space-age elements that celebrate humanity's fascination with asteroids, planetary science, and interstellar exploration. As an ambassador for discovery, Asteroid Maximus encourages people to look beyond Earth, embrace innovation, and explore the mysteries hidden among the stars.
+            </p>
+          </div>
+
+
+        </div>
+
+        <!-- Character highlights -->
+        <div class="md:col-span-2 space-y-4">
+          <div class="imperial-card rounded-3xl p-7">
+            <div class="uppercase text-xs tracking-[3px] text-[#8c5e2e] mb-3">
+              THE LEGACY OF LIZ PERROTO
+            </div>
+            <div class="space-y-4 text-[15px]">
+              <div class="flex gap-3">
+                <span class="text-[#d4af77] mt-1">•</span>
+                <span
+                  >Guided by curiosity, she explores the timeless wonders of the cosmos.</span
+                >
+              </div>
+              <div class="flex gap-3">
+                <span class="text-[#d4af77] mt-1">•</span>
+                <span
+                  >Inspired by the ancient asteroids, she creates stories that connect science, imagination, and discovery.</span
+                >
+              </div>
+              <div class="flex gap-3">
+                <span class="text-[#d4af77] mt-1">•</span>
+                <span
+                  > Her vision reminds us that every journey into space begins with a single question and the courage to seek its answer.</span
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="imperial-card rounded-3xl p-7">
+            <div class="text-[#8c5e2e] text-xs tracking-[2px] mb-3">
+              KNOWN AS
+            </div>
+            <div class="text-2xl leading-none tracking-tight">
+              The Creator of <br />Asteroid Maximus
+            </div>
+            <div class="mt-4 text-xs text-[#c9b89a]">
+              Explorer • Innovator • Educator • Voice of the Celestial Frontier
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- THE ALLIANCE - ELON FEATURE (NOT IN GALLERY) -->
+    <section
+      id="alliance"
+      class="relative py-16 bg-[#110c08] border-y border-[#3a2a1f]"
+    >
+      <div class="max-w-6xl mx-auto px-6">
+        <div class="flex justify-center mb-3">
+          <div
+            class="inline px-6 py-1 text-xs tracking-[3px] bg-[#3a2a1f] rounded text-[#d4af77]"
+          >
+            ATEROID MAXIMUS
+          </div>
+        </div>
+
+        <h2
+          class="text-center text-6xl md:text-7xl ancient-title tracking-tighter mb-3"
+        >
+        ABOUT
+        </h2>
+        <p class="text-center text-[#c9b89a] text-xl mb-12 tracking-wide">
+          LIZ PERROTTO & ASTEROID
+        </p>
+
+        <div class="relative max-w-5xl mx-auto">
+          <div
+            class="rounded-3xl overflow-hidden emperor-shadow border border-[#5c4630]"
+          >
+            <img
+              src="images/alliance-ancient.jpg"
+              alt="Elon Musk and ASTEROID MAXIMUS as ancient warriors — The Alliance of Legends"
+              class="w-full h-auto object-cover"
+            />
+          </div>
+
+          <div
+            class="absolute -bottom-6 left-1/2 -translate-x-1/2 bg-[#1c140f] border border-[#d4af77] px-10 py-5 rounded-2xl text-center max-w-[540px]"
+          >
+            <div class="uppercase tracking-[4px] text-xs text-[#d4af77]">
+              THE PROPHECY FULFILLED
+            </div>
+            <p class="mt-3 text-lg leading-tight">
+              When the stars called humanity toward the frontier, one guardian rose from the celestial stones. Asteroid Maximus became the standard-bearer of courage, curiosity, and the endless pursuit of knowledge.
+            </p>
+            <div class="text-[#8c5e2e] text-xs mt-3 tracking-widest">
+              “HE LEADS NOT AN EMPIRE OF MEN, BUT AN EMPIRE OF POSSIBILITY.” — THE COMMANDER
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TOKENOMICS -->
+    <section id="tokenomics" class="max-w-6xl mx-auto px-6 pt-20 pb-24">
+      <div class="text-center mb-14">
+        <div class="roman-ornament mb-3">⚜ ☆ ⚜</div>
+        <h2 class="text-6xl ancient-title tracking-tighter">
+          Imperial Tokenomics
+        </h2>
+        <p class="mt-3 text-xl text-[#c9b89a]">
+          The sacred laws of the empire. Written in stone. Never to be broken.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-5">
+        <!-- Total Supply -->
+        <div
+          class="imperial-card rounded-3xl px-8 py-9 flex flex-col justify-center items-center text-center border border-[#5c4630]"
+        >
+          <div class="text-[#8c5e2e] tracking-[3px] text-xs mb-2">
+            TOTAL SUPPLY
+          </div>
+          <div class="stat-number font-bold text-[#d4af77] leading-none">
+            1Billion
+          </div>
+          <div class="text-2xl mt-0.5 text-[#d4af77]/70">ASTEROID</div>
+          <div class="mt-5 text-xs text-[#8c5e2e] tracking-wider">
+            ONE BILLION • NO MORE, NO LESS
+          </div>
+        </div>
+
+        <!-- 0% Tax -->
+        <div class="imperial-card rounded-3xl p-8 flex flex-col">
+          <div class="flex items-center gap-x-4 mb-5">
+            <div
+              class="w-12 h-12 rounded-2xl bg-[#3a2a1f] flex items-center justify-center flex-shrink-0"
+            >
+              <i class="fas fa-fire text-3xl text-[#d4af77]"></i>
+            </div>
+            <div>
+              <div
+                class="text-[1.5rem] font-semibold tracking-tighter leading-none"
+              >
+                0%
+              </div>
+              <div class="text-[#d4af77] text-sm tracking-[2px] -mt-0.5">
+                TAX
+              </div>
+            </div>
+          </div>
+          <div class="mt-auto text-[#c9b89a] text-[15px] leading-snug">
+            Zero fees. The emperor takes nothing from his citizens. All gains
+            belong to the legion.
+          </div>
+        </div>
+
+        <!-- LP Burnt -->
+        <div class="imperial-card rounded-3xl p-8 flex flex-col">
+          <div class="flex items-center gap-x-4 mb-5">
+            <div
+              class="w-12 h-12 rounded-2xl bg-[#3a2a1f] flex items-center justify-center flex-shrink-0"
+            >
+              <i class="fas fa-skull text-3xl text-[#d4af77]"></i>
+            </div>
+            <div>
+              <div
+                class="text-[1.5rem] font-semibold tracking-tighter leading-none"
+              >
+                BURNT
+              </div>
+              <div class="text-[#d4af77] text-sm tracking-[2px] -mt-0.5">
+                LIQUIDITY
+              </div>
+            </div>
+          </div>
+          <div class="mt-auto text-[#c9b89a] text-[15px] leading-snug">
+            LP tokens sacrificed to the eternal flame. The treasury cannot be
+            drained. Ever.
+          </div>
+        </div>
+
+        <!-- Renounced -->
+        <div class="imperial-card rounded-3xl p-8 flex flex-col">
+          <div class="flex items-center gap-x-4 mb-5">
+            <div
+              class="w-12 h-12 rounded-2xl bg-[#3a2a1f] flex items-center justify-center flex-shrink-0"
+            >
+              <i class="fas fa-user-slash text-3xl text-[#d4af77]"></i>
+            </div>
+            <div>
+              <div
+                class="text-[1.5rem] font-semibold tracking-tighter leading-none"
+              >
+                RENOUNCED
+              </div>
+              <div class="text-[#d4af77] text-sm tracking-[2px] -mt-0.5">
+                OWNERSHIP
+              </div>
+            </div>
+          </div>
+          <div class="mt-auto text-[#c9b89a] text-[15px] leading-snug">
+            The emperor has laid down his scepter. No single soul controls the
+            fate of Shibius.
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom row -->
+      <div class="mt-5 grid md:grid-cols-3 gap-5">
+        <!-- Contract -->
+        <div class="imperial-card rounded-3xl p-7">
+          <div class="flex items-start gap-4">
+            <i class="fas fa-link text-2xl text-[#d4af77] mt-0.5"></i>
+            <div class="flex-1 min-w-0">
+              <div class="font-semibold tracking-wider text-sm">
+                CONTRACT ADDRESS
+              </div>
+              <div
+                class="mt-2.5 p-3 bg-black/50 rounded-2xl font-mono text-[11px] break-all text-[#8c5e2e] border border-[#3a2a1f]"
+              >
+                0xComingSoon
+              </div>
+              <div class="flex items-center gap-x-2 mt-2.5">
+                <button
+                  onclick="copyContract(this)"
+                  class="inline-flex items-center gap-x-1.5 px-3.5 py-1 text-[10px] tracking-wider bg-[#3a2a1f] hover:bg-[#d4af77] hover:text-[#1c140f] rounded-xl transition-colors"
+                >
+                  <i class="far fa-copy"></i> <span>COPY</span>
+                </button>
+                <span class="text-[10px] text-[#8c5e2e]"
+                  >Replace with real contract after deployment</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Chain -->
+        <div class="imperial-card rounded-3xl p-7 flex items-center">
+          <div class="flex items-center gap-4">
+            <div
+              class="w-12 h-12 rounded-2xl bg-[#3a2a1f] flex items-center justify-center flex-shrink-0"
+            >
+              <i class="fab fa-ethereum text-3xl text-[#d4af77]"></i>
+            </div>
+            <div>
+              <div class="uppercase text-xs tracking-[2.5px] text-[#8c5e2e]">
+                BLOCKCHAIN
+              </div>
+              <div class="font-semibold text-xl tracking-tight">ETHEREUM</div>
+              <div class="text-xs text-[#c9b89a] mt-0.5">
+                The only chain worthy of an emperor
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Philosophy -->
+        <div class="imperial-card rounded-3xl p-7 flex items-center">
+          <div class="text-[15px] leading-snug">
+            A pure community experiment.
+            <span class="text-[#d4af77]"
+              >No team allocation. No VC round. No presale.</span
+            ><br />
+            Only the people. Only the memes. Only the empire.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- GALLERY -->
+    <section id="gallery" class="bg-[#110c08] border-y border-[#3a2a1f] py-16">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="flex flex-col items-center text-center mb-12">
+          <div class="roman-ornament mb-2">⚜ ☆ ⚜</div>
+          <h2 class="text-6xl ancient-title tracking-tighter">
+            Gallery
+          </h2>
+          <p class="max-w-md mt-3 text-[#c9b89a]">
+            Ten sacred artifacts depicting the rise of ASTEROID MAXIMUS. Each one
+            a chapter in the eternal meme saga.
+          </p>
+          <div class="mt-3 text-xs tracking-[2px] text-[#8c5e2e]">
+            10 ARTIFACTS • CLICK TO ENLARGE
+          </div>
+        </div>
+
+        <div
+          class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4"
+        >
+          <!-- Gallery images with captions -->
+          <div
+            onclick="openGalleryModal(0)"
+            class="group relative rounded-2xl overflow-hidden aspect-[16/10]"
+          >
+            <img
+              src="images/colosseum.jpg"
+              class="gallery-img absolute inset-0 w-full h-full object-cover"
+              alt="ASTEROID MAXIMUS in the Colosseum"
+            />
+            <div
+              class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/90 to-transparent p-5"
+            >
+              <div class="text-xs text-[#d4af77] tracking-[1px]">
+                I • THE ARENA
+              </div>
+              <div class="font-semibold tracking-tight text-lg">
+                Conqueror of the Colosseum
+              </div>
+            </div>
+          </div>
+
+          <div
+            onclick="openGalleryModal(1)"
+            class="group relative rounded-2xl overflow-hidden aspect-[16/10]"
+          >
+            <img
+              src="images/throne.jpg"
+              class="gallery-img absolute inset-0 w-full h-full object-cover"
+              alt="ASTEROID MAXIMUS on the Imperial Throne"
+            />
+            <div
+              class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/90 to-transparent p-5"
+            >
+              <div class="text-xs text-[#d4af77] tracking-[1px]">
+                II • THE THRONE
+              </div>
+              <div class="font-semibold tracking-tight text-lg">
+                Emperor of the Chain
+              </div>
+            </div>
+          </div>
+
+          <div
+            onclick="openGalleryModal(2)"
+            class="group relative rounded-2xl overflow-hidden aspect-[16/10]"
+          >
+            <img
+              src="images/gladiator.jpg"
+              class="gallery-img absolute inset-0 w-full h-full object-cover"
+              alt="ASTEROID MAXIMUS the Gladiator"
+            />
+            <div
+              class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/90 to-transparent p-5"
+            >
+              <div class="text-xs text-[#d4af77] tracking-[1px]">
+                III • THE GLADIATOR
+              </div>
+              <div class="font-semibold tracking-tight text-lg">
+                No Mercy for Weak Hands
+              </div>
+            </div>
+          </div>
+
+          <div
+            onclick="openGalleryModal(3)"
+            class="group relative rounded-2xl overflow-hidden aspect-[16/10]"
+          >
+            <img
+              src="images/mountain-conquest.jpg"
+              class="gallery-img absolute inset-0 w-full h-full object-cover"
+              alt="ASTEROID MAXIMUS conquering mountains"
+            />
+            <div
+              class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/90 to-transparent p-5"
+            >
+              <div class="text-xs text-[#d4af77] tracking-[1px]">
+                IV • THE CONQUEST
+              </div>
+              <div class="font-semibold tracking-tight text-lg">
+                Beyond the Alps
+              </div>
+            </div>
+          </div>
+
+          <div
+            onclick="openGalleryModal(4)"
+            class="group relative rounded-2xl overflow-hidden aspect-[16/10]"
+          >
+            <img
+              src="images/naval-commander.jpg"
+              class="gallery-img absolute inset-0 w-full h-full object-cover"
+              alt="ASTEROID MAXIMUS naval commander"
+            />
+            <div
+              class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/90 to-transparent p-5"
+            >
+              <div class="text-xs text-[#d4af77] tracking-[1px]">
+                V • THE ADMIRAL
+              </div>
+              <div class="font-semibold tracking-tight text-lg">
+                Master of the Token Seas
+              </div>
+            </div>
+          </div>
+
+          <div
+            onclick="openGalleryModal(5)"
+            class="group relative rounded-2xl overflow-hidden aspect-[16/10]"
+          >
+            <img
+              src="images/treasure.jpg"
+              class="gallery-img absolute inset-0 w-full h-full object-cover"
+              alt="ASTEROID MAXIMUS with treasure"
+            />
+            <div
+              class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/90 to-transparent p-5"
+            >
+              <div class="text-xs text-[#d4af77] tracking-[1px]">
+                VI • THE VAULT
+              </div>
+              <div class="font-semibold tracking-tight text-lg">
+                Diamond Paws, Eternal Bags
+              </div>
+            </div>
+          </div>
+
+          <div
+            onclick="openGalleryModal(6)"
+            class="group relative rounded-2xl overflow-hidden aspect-[16/10]"
+          >
+            <img
+              src="images/masterpiece.jpg"
+              class="gallery-img absolute inset-0 w-full h-full object-cover"
+              alt="ASTEROID MAXIMUS masterpiece portrait"
+            />
+            <div
+              class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/90 to-transparent p-5"
+            >
+              <div class="text-xs text-[#d4af77] tracking-[1px]">
+                VII • THE MASTERPIECE
+              </div>
+              <div class="font-semibold tracking-tight text-lg">
+                Painted by the Gods
+              </div>
+            </div>
+          </div>
+
+          <div
+            onclick="openGalleryModal(7)"
+            class="group relative rounded-2xl overflow-hidden aspect-[16/10]"
+          >
+            <img
+              src="images/senate-speech.jpg"
+              class="gallery-img absolute inset-0 w-full h-full object-cover"
+              alt="ASTEROID MAXIMUS addressing the Senate"
+            />
+            <div
+              class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/90 to-transparent p-5"
+            >
+              <div class="text-xs text-[#d4af77] tracking-[1px]">
+                VIII • THE SENATE
+              </div>
+              <div class="font-semibold tracking-tight text-lg">
+                Address to the Legion
+              </div>
+            </div>
+          </div>
+
+          <div
+            onclick="openGalleryModal(8)"
+            class="group relative rounded-2xl overflow-hidden aspect-[16/10]"
+          >
+            <img
+              src="images/chariot.jpg"
+              class="gallery-img absolute inset-0 w-full h-full object-cover"
+              alt="ASTEROID MAXIMUS on golden chariot"
+            />
+            <div
+              class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/90 to-transparent p-5"
+            >
+              <div class="text-xs text-[#d4af77] tracking-[1px]">
+                IX • THE TRIUMPH
+              </div>
+              <div class="font-semibold tracking-tight text-lg">
+                The Victory March
+              </div>
+            </div>
+          </div>
+
+          <div
+            onclick="openGalleryModal(9)"
+            class="group relative rounded-2xl overflow-hidden aspect-[16/10]"
+          >
+            <img
+              src="images/samurai-warrior.jpg"
+              class="gallery-img absolute inset-0 w-full h-full object-cover"
+              alt="ASTEROID MAXIMUS samurai warrior"
+            />
+            <div
+              class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/90 to-transparent p-5"
+            >
+              <div class="text-xs text-[#d4af77] tracking-[1px]">
+                X • THE WARRIOR
+              </div>
+              <div class="font-semibold tracking-tight text-lg">
+                Bushido of the Blockchain
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOW TO BUY -->
+    <section id="buy" class="max-w-5xl mx-auto px-6 py-20">
+      <div class="text-center mb-12">
+        <div class="roman-ornament mb-2">⚜</div>
+        <h2 class="text-6xl ancient-title tracking-tighter">How To Buy</h2>
+        <p class="text-[#c9b89a] mt-3 text-xl">
+          Four steps to buy $ASTEROID.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-4 gap-5">
+        <div class="imperial-card rounded-3xl p-8 relative">
+          <div
+            class="absolute top-7 right-7 w-9 h-9 flex items-center justify-center rounded-full border border-[#5c4630] text-[#d4af77] text-xl font-bold"
+          >
+            1
+          </div>
+          <div class="mb-5">
+            <i class="fas fa-wallet text-4xl text-[#d4af77]"></i>
+          </div>
+          <div class="font-semibold tracking-tight text-xl mb-3">
+            Get a Wallet
+          </div>
+          <p class="text-sm text-[#c9b89a]">
+            Download MetaMask or any Ethereum wallet. Guard your seed phrase
+            like the sacred scrolls.
+          </p>
+        </div>
+        <div class="imperial-card rounded-3xl p-8 relative">
+          <div
+            class="absolute top-7 right-7 w-9 h-9 flex items-center justify-center rounded-full border border-[#5c4630] text-[#d4af77] text-xl font-bold"
+          >
+            2
+          </div>
+          <div class="mb-5">
+            <i class="fab fa-ethereum text-4xl text-[#d4af77]"></i>
+          </div>
+          <div class="font-semibold tracking-tight text-xl mb-3">
+            Acquire ETH
+          </div>
+          <p class="text-sm text-[#c9b89a]">
+            Buy Ethereum on Coinbase, Binance, or Kraken. Send it to your new
+            wallet.
+          </p>
+        </div>
+        <div class="imperial-card rounded-3xl p-8 relative">
+          <div
+            class="absolute top-7 right-7 w-9 h-9 flex items-center justify-center rounded-full border border-[#5c4630] text-[#d4af77] text-xl font-bold"
+          >
+            3
+          </div>
+          <div class="mb-5">
+            <i class="fas fa-exchange-alt text-4xl text-[#d4af77]"></i>
+          </div>
+          <div class="font-semibold tracking-tight text-xl mb-3">
+            Go to Uniswap
+          </div>
+          <p class="text-sm text-[#c9b89a]">
+            Visit app.uniswap.org. Connect your wallet. Search for $ASTEROID.
+          </p>
+        </div>
+        <div class="imperial-card rounded-3xl p-8 relative">
+          <div
+            class="absolute top-7 right-7 w-9 h-9 flex items-center justify-center rounded-full border border-[#5c4630] text-[#d4af77] text-xl font-bold"
+          >
+            4
+          </div>
+          <div class="mb-5">
+            <i class="fas fa-coins text-4xl text-[#d4af77]"></i>
+          </div>
+          <div class="font-semibold tracking-tight text-xl mb-3">
+            Buy &amp; HODL
+          </div>
+          <p class="text-sm text-[#c9b89a]">
+            Swap your ETH for $ASTEROID. Welcome, citizen. The empire thanks you.
+          </p>
+        </div>
+      </div>
+
+      <div class="mt-8 flex justify-center">
+        <a
+          href="https://app.uniswap.org/#/swap?inputCurrency=eth&outputCurrency=0xComingSoon"
+          target="_blank"
+          class="px-12 py-4 flex items-center gap-x-3 rounded-full bg-[#d4af77] hover:bg-[#f4e4c1] active:scale-[0.985] text-[#1c140f] font-semibold tracking-[2px] text-sm transition-all"
+        >
+          <span>BUY $ASTEROID NOW</span>
+          <i class="fas fa-arrow-right"></i>
+        </a>
+      </div>
+    </section>
+
+    <!-- COMMUNITY / FINAL CTA -->
+    <section class="bg-[#1c140f] border-t border-[#3a2a1f] py-14">
+      <div class="max-w-4xl mx-auto px-6 text-center">
+        <div class="roman-ornament mb-3 text-3xl">⚜ ☆ ⚜</div>
+
+        <h3 class="text-5xl tracking-tighter ancient-title mb-4">
+          JOIN COMMUNITY
+        </h3>
+        <p class="max-w-md mx-auto text-[#c9b89a]">
+          ASTEROID MAXIMUS does not beg. He commands. Answer the call, citizen.
+        </p>
+
+        <div class="flex flex-wrap justify-center gap-4 mt-10">
+          <a
+            href="https://t.me/Shibius_eth"
+            target="_blank"
+            class="flex items-center gap-x-3 px-8 py-3.5 rounded-2xl border border-[#5c4630] hover:border-[#d4af77] hover:text-[#d4af77] transition-colors"
+          >
+            <i class="fab fa-telegram-plane text-xl"></i>
+            <span class="tracking-wider text-sm">TELEGRAM</span>
+          </a>
+          <a
+            href="https://x.com/Shibius_eth"
+            target="_blank"
+            class="flex items-center gap-x-3 px-8 py-3.5 rounded-2xl border border-[#5c4630] hover:border-[#d4af77] hover:text-[#d4af77] transition-colors"
+          >
+            <i class="fab fa-twitter text-xl"></i>
+            <span class="tracking-wider text-sm">X / TWITTER</span>
+          </a>
+          <a
+            href="https://www.dextools.io/app/en/ether/pair-explorer/0xComingSoon"
+            target="_blank"
+            class="flex items-center gap-x-3 px-8 py-3.5 rounded-2xl border border-[#5c4630] hover:border-[#d4af77] hover:text-[#d4af77] transition-colors"
+          >
+            <i class="fas fa-chart-line text-xl"></i>
+            <span class="tracking-wider text-sm">Dextools</span>
+          </a>
+        </div>
+
+        <div class="mt-14 text-[11px] text-[#5c4630] tracking-[2px]">
+          ASTEROID MAXIMUS © LIZ PERROTTO • NOT FINANCIAL ADVICE • MEMES
+          ARE FOREVER
+        </div>
+      </div>
+    </section>
+
+    <!-- GALLERY LIGHTBOX MODAL -->
+    <div
+      id="galleryModal"
+      onclick="closeGalleryModal()"
+      class="hidden fixed inset-0 z-[70] bg-black/95 flex items-center justify-center p-4"
+    >
+      <div
+        onclick="event.stopImmediatePropagation()"
+        class="gallery-modal max-w-5xl w-full"
+      >
+        <div class="relative">
+          <button
+            onclick="closeGalleryModal()"
+            class="absolute -top-4 -right-4 z-10 w-12 h-12 flex items-center justify-center bg-[#1c140f] hover:bg-[#d4af77] hover:text-[#1c140f] text-[#d4af77] rounded-full border border-[#5c4630] text-3xl leading-none transition-colors"
+          >
+            ×
+          </button>
+
+          <div class="rounded-3xl overflow-hidden border border-[#5c4630]">
+            <img
+              id="modalImage"
+              class="w-full max-h-[78vh] object-contain bg-black"
+              alt=""
+            />
+          </div>
+
+          <div
+            class="bg-[#1c140f] border border-t-0 border-[#5c4630] p-7 rounded-b-3xl"
+          >
+            <div class="flex items-center justify-between">
+              <div>
+                <div
+                  id="modalChapter"
+                  class="text-xs text-[#d4af77] tracking-[3px]"
+                ></div>
+                <div
+                  id="modalTitle"
+                  class="text-3xl tracking-tighter font-semibold"
+                ></div>
+              </div>
+              <div class="text-right max-w-[240px]">
+                <div id="modalDesc" class="text-sm text-[#c9b89a]"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // Tailwind script
+      function initializeTailwind() {
+        // Already using CDN, can extend here if needed
+      }
+
+      // Gallery Data
+      const galleryItems = [
+        {
+          src: "images/colosseum.jpg",
+          chapter: "I • THE ARENA",
+          title: "Conqueror of the Colosseum",
+          desc: "ASTEROID MAXIMUS entered the blood-soaked sands. The crowd fell silent. By sunset, every chart had bent the knee.",
+        },
+        {
+          src: "images/throne.jpg",
+          chapter: "II • THE THRONE",
+          title: "Emperor of the Chain",
+          desc: "From his golden seat, he watches the markets rise and fall. The true emperor does not chase pumps. The pumps chase him.",
+        },
+        {
+          src: "images/gladiator.jpg",
+          chapter: "III • THE GLADIATOR",
+          title: "No Mercy for Weak Hands",
+          desc: "Blade in paw. Fire in his eyes. The weak paper hands were culled that day. Only the diamond remained.",
+        },
+        {
+          src: "images/mountain-conquest.jpg",
+          chapter: "IV • THE CONQUEST",
+          title: "Beyond the Alps",
+          desc: "He led the great migration across impossible terrain. New chains fell before him. Shibius knew no borders.",
+        },
+        {
+          src: "images/naval-commander.jpg",
+          chapter: "V • THE ADMIRAL",
+          title: "Master of the Token Seas",
+          desc: "Storms could not break him. Whales could not move him. Shibius sailed straight into history.",
+        },
+        {
+          src: "images/treasure.jpg",
+          chapter: "VI • THE VAULT",
+          title: "Diamond Paws, Eternal Bags",
+          desc: "The emperor's treasury overflowed with ETH and loyalty. Those who held beside him became legends themselves.",
+        },
+        {
+          src: "images/masterpiece.jpg",
+          chapter: "VII • THE MASTERPIECE",
+          title: "Painted by the Gods",
+          desc: "The greatest artists of Rome begged for the honor of capturing his likeness. This is their finest work.",
+        },
+        {
+          src: "images/senate-speech.jpg",
+          chapter: "VIII • THE SENATE",
+          title: "Address to the Legion",
+          desc: '"Citizens! The moon is not a destination. It is merely a stepping stone on our path to Valhalla."',
+        },
+        {
+          src: "images/chariot.jpg",
+          chapter: "IX • THE TRIUMPH",
+          title: "The Victory March",
+          desc: "Through the streets of Rome they carried him. Flowers rained from the sky. The empire had never seen such glory.",
+        },
+        {
+          src: "images/samurai-warrior.jpg",
+          chapter: "X • THE WARRIOR",
+          title: "Bushido of the Blockchain",
+          desc: "East and West bowed before him. The code of the warrior and the code of the chain became one.",
+        },
+      ];
+
+      let currentGalleryIndex = 0;
+
+      function openGalleryModal(index) {
+        const modal = document.getElementById("galleryModal");
+        const img = document.getElementById("modalImage");
+        const chapter = document.getElementById("modalChapter");
+        const title = document.getElementById("modalTitle");
+        const desc = document.getElementById("modalDesc");
+
+        const item = galleryItems[index];
+
+        img.src = item.src;
+        chapter.textContent = item.chapter;
+        title.textContent = item.title;
+        desc.textContent = item.desc;
+
+        currentGalleryIndex = index;
+        modal.classList.remove("hidden");
+        modal.classList.add("flex");
+
+        // Keyboard support
+        document.onkeydown = function (e) {
+          if (e.key === "Escape") closeGalleryModal();
+          if (e.key === "ArrowRight") navigateGallery(1);
+          if (e.key === "ArrowLeft") navigateGallery(-1);
+        };
+      }
+
+      function navigateGallery(direction) {
+        let newIndex = currentGalleryIndex + direction;
+        if (newIndex < 0) newIndex = galleryItems.length - 1;
+        if (newIndex >= galleryItems.length) newIndex = 0;
+
+        const img = document.getElementById("modalImage");
+        const chapter = document.getElementById("modalChapter");
+        const title = document.getElementById("modalTitle");
+        const desc = document.getElementById("modalDesc");
+
+        const item = galleryItems[newIndex];
+
+        // Fade transition
+        img.style.transition = "opacity 0.15s";
+        img.style.opacity = "0";
+
+        setTimeout(() => {
+          img.src = item.src;
+          chapter.textContent = item.chapter;
+          title.textContent = item.title;
+          desc.textContent = item.desc;
+          currentGalleryIndex = newIndex;
+
+          img.style.opacity = "1";
+        }, 150);
+      }
+
+      function closeGalleryModal() {
+        const modal = document.getElementById("galleryModal");
+        modal.classList.remove("flex");
+        modal.classList.add("hidden");
+        document.onkeydown = null;
+      }
+
+      // Close modal on escape key globally (backup)
+      document.addEventListener("keydown", function (e) {
+        if (e.key === "Escape") {
+          const modal = document.getElementById("galleryModal");
+          if (!modal.classList.contains("hidden")) {
+            closeGalleryModal();
+          }
+        }
+      });
+
+      // Smooth scroll for nav links
+      function setupSmoothScroll() {
+        document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+          anchor.addEventListener("click", function (e) {
+            const target = document.querySelector(this.getAttribute("href"));
+            if (target) {
+              e.preventDefault();
+              target.scrollIntoView({ behavior: "smooth", block: "start" });
+            }
+          });
+        });
+      }
+
+      // Copy contract address
+      function copyContract(btn) {
+        const contractText = "0xComingSoon"; // TODO: Replace with real contract
+        const originalHTML = btn.innerHTML;
+
+        navigator.clipboard
+          .writeText(contractText)
+          .then(() => {
+            btn.innerHTML = '<i class="fas fa-check"></i> <span>COPIED</span>';
+            setTimeout(() => {
+              btn.innerHTML = originalHTML;
+            }, 1800);
+          })
+          .catch(() => {
+            // Fallback
+            prompt("Copy this contract address:", contractText);
+          });
+      }
+
+      // Easter egg: click logo to show secret message
+      function setupEasterEgg() {
+        const logo = document.querySelector("nav .w-11");
+        if (logo) {
+          let clicks = 0;
+          logo.addEventListener("click", () => {
+            clicks++;
+            if (clicks === 5) {
+              const original = logo.style.transform;
+              logo.style.transition = "transform 0.6s";
+              logo.style.transform = "rotate(360deg) scale(1.2)";
+              setTimeout(() => {
+                logo.style.transform = original || "";
+                clicks = 0;
+              }, 700);
+
+              const toast = document.createElement("div");
+              toast.className =
+                "fixed bottom-6 left-1/2 -translate-x-1/2 bg-[#d4af77] text-[#1c140f] px-6 py-2 rounded-full text-xs tracking-widest z-[80]";
+              toast.textContent = "LIZ PERROTTO • THE EMPEROR SMILES UPON YOU";
+              document.body.appendChild(toast);
+              setTimeout(() => toast.remove(), 2200);
+            }
+          });
+        }
+      }
+
+      // Initialize everything
+      function init() {
+        initializeTailwind();
+        setupSmoothScroll();
+        setupEasterEgg();
+
+        // Random subtle particle effect on hero (optional fun)
+        console.log(
+          "%c[ASTEROID MAXIMUS] Website initialized. The empire is ready.",
+          "color:#5c4630"
+        );
+      }
+
+      window.onload = init;
+    </script>
+  </body>
+</html>
